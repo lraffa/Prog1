@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=buchTitel\ buchISBN
+comment0.target=Buch(java.lang.String,\ int)
+comment0.text=\r\n\ Erzeugt\ ein\ Buch\ mit\ den\ spezifizierten\ Werten\ fuer\ \r\n\ Titel\ und\ ISBN-Nummer\ und\ setzt\ den\ Bestand\ auf\ 0.\r\n\ @param\ buchTitel\ Der\ Buchtitel.\r\n
+comment1.params=
+comment1.target=int\ getBestand()
+comment1.text=\r\n\ Liefert\ den\ aktuellen\ Bestand.\r\n\ @return\ Der\ Bestand.\r\n
+comment2.params=veraenderung
+comment2.target=int\ veraendereBestand(int)
+comment2.text=\r\n\ Veraendert\ den\ Bestand\ um\ den\ angegebenen\ Wert.\r\n\ @param\ veraenderung\ Die\ Veraenderung\ des\ Bestands.\r\n
+comment3.params=
+comment3.target=void\ output()
+comment3.text=\r\n\ Gibt\ die\ Informationen\ eines\ Buches\ aus.\r\n
+numComments=4

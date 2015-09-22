@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.params=kontoinhaber
+comment0.target=Konto(java.lang.String)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Konto\r\n
+comment1.params=kontoinhaber\ zinssatz
+comment1.target=Konto(java.lang.String,\ int)
+comment2.params=
+comment2.target=int\ getZinssatz()
+comment3.params=zinssatz
+comment3.target=void\ setZinssatz(int)
+comment4.params=betrag
+comment4.target=void\ geldEinzahlen(int)
+comment5.params=betrag
+comment5.target=void\ geldAbheben(int)
+comment6.params=
+comment6.target=int\ jahreszinsBerechnen()
+comment7.params=
+comment7.target=void\ zeigeKontoZustand()
+numComments=8
