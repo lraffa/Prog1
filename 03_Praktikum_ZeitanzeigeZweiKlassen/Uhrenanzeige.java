@@ -23,7 +23,7 @@ public class Uhrenanzeige
 
   /**
    * Konstruktor für ein Exemplar von Uhrenanzeige.
-   * Mit diesem Konstruktor wird die Anzeige auf 00:00 initialisiert.
+   * Mit diesem Konstruktor wird die Anzeige auf 00:00:00 initialisiert.
    */
   public Uhrenanzeige()
   {
@@ -36,7 +36,7 @@ public class Uhrenanzeige
   /**
    * Konstruktor für ein Exemplar von Uhrenanzeige.
    * Mit diesem Konstruktor wird die Anzeige auf den Wert
-   * initialisiert, der durch 'stunde' und 'minute' 
+   * initialisiert, der durch 'stunde' und 'minute' und 'sekunde' 
    * definiert ist.
    */
   public Uhrenanzeige(int stunde, int minute, int sekunde)
@@ -49,7 +49,7 @@ public class Uhrenanzeige
 
   /**
    * Diese Operation sollte einmal pro Minute aufgerufen werden -
-   * sie sorgt dafür, dass diese Uhrenanzeige um eine Minute
+   * sie sorgt dafür, dass diese Uhrenanzeige um eine Sekunde
    * weiter gestellt wird.
    */
   public void taktsignalGeben()
@@ -65,8 +65,8 @@ public class Uhrenanzeige
   }
 
   /**
-   * Setze die Uhrzeit dieser Anzeige auf die gegebene 'stunde' und
-   * 'minute'.
+   * Setze die Uhrzeit dieser Anzeige auf die gegebene 'stunde',
+   * 'minute' und 'sekunde'.
    */
   public void setzeUhrzeit(int stunde, int minute, int sekunde)
   {
@@ -77,7 +77,7 @@ public class Uhrenanzeige
   }
 
   /**
-   * Liefere die aktuelle Uhrzeit dieser Uhrenanzeige im Format SS:MM.
+   * Liefere die aktuelle Uhrzeit dieser Uhrenanzeige im Format SS:MM:SS.
    */
   public String gibUhrzeit()
   {
