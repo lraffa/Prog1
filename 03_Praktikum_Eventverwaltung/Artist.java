@@ -53,7 +53,7 @@ public class Artist
      * 
      * @return gibt den Namen des Künstlers zurück
      */
-    public String getArtistName()
+    public String getName()
     {
         return artistName;
     }
