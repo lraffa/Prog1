@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class Event here.
+ * Die Klasse Event erzeugt ein Event.
  * 
  * @author (raffaluc, wemlmax) 
  * @version (12.10.2015)
@@ -23,6 +23,15 @@ public class Event
     /**
      * Erzeugt eine Instanz mit Künstlername, Gage, VIP-Tickets, Tribuehne-Tickets, Innenraum-Tickets
      * inkl. Anzahl und Preis der einzelnen Tickets
+     * 
+     * @param artistName der Name des Künstlers
+     * @param salary die Gage des Künstlers in Fr.
+     * @param vipPrice die Kosten eines VIP-Tickests in Fr.
+     * @param standPrice die Kosten eines Tribuehnen-Tickets in Fr.
+     * @param indoorPrice die Kosten eines Innenraum-Tickets in Fr.
+     * @param vipTickets die Anzahl VIP-Tickets in Stück
+     * @param standTickets die Anzahl Triebuehnen-Tickets in Stück.
+     * @param indoorTickets die Anzahl Innenraum-Tickets in Stück.
      */
     public Event(String artistName, int salary, int vipPrice, int standPrice, int indoorPrice, int vipTickets, int standTickets, int indoorTickets)
     {
@@ -34,6 +43,9 @@ public class Event
     }
     /**
      * Setzt den Namen und die Gage des Künstlers
+     * 
+     * @param artistName der Name des Künstlers
+     * @param artistSalary die Gage des Künstlers in Fr.
      */
     public void setArtist(String artistName, int artistSalary)
     {
@@ -48,6 +60,12 @@ public class Event
     }
     /**
      * Setzt den Namen, die Kategorie, die Anzahl und den Preis eines Ticktes
+     * 
+     * @param name der Name des Tickets
+     * @param category die Ticket-Kategorie aus der Klasse Ticket
+     * @amount die anzahl Tickets in Stück
+     * @price der Preis pro Ticket in Fr.
+     * 
      */
     public void setTicket(String name, Ticket.TicketCategory category, int amount, int price)
     {
@@ -63,6 +81,9 @@ public class Event
 
     /**
      * Kauft eine Anzahl Tickets einer bestimmten Ticket-Kategorie
+     * 
+     * @param category die Ticket-Kategorie aus der Klasse Ticket
+     * @param amount die anzahl Tickets in Stück
      */
     public void buyTickets(Ticket.TicketCategory category, int amount)
     {
@@ -70,6 +91,7 @@ public class Event
     }
     /**
      * Gibt Informationen über den Event in der Konsole aus
+     * 
      */
     public void showEvent()
     {
@@ -85,7 +107,13 @@ public class Event
         System.out.println("");
         System.out.println("Gewinn: CHF " +(revenue - artist.getSalary()));
     }
-    
+    /**
+     *  Gibt die Ticket Art nach Kategorie zurück
+     *  
+     *  @param category die Ticket-Kategorie aus der Klasse Ticket
+     *  
+     *  @return das Ticket in der gewünschten Ticket-Kategorie 
+     */
     private Ticket getTicketByCategory(Ticket.TicketCategory category)
     {
         switch(category)
@@ -96,7 +124,13 @@ public class Event
             default: return null;
         }
     }
-    
+    /**
+     *  Erstellt ein Ticket nach Kategorie
+     *  
+     *  @param category die Ticket-Kategorie aus der Klasse Ticket
+     *  
+     *  @return das neue Ticket in der gewünschten Ticket-Kategorie
+     */
     private Ticket createTicketByCategory(Ticket.TicketCategory category)
     {
         switch(category)

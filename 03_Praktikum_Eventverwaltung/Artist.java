@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class Artist here.
+ * Die Klasse Artist erzeugt einen Künstler für ein Event
  * 
  * @author (raffaluc, wemlmax) 
  * @version (12.10.2015)
@@ -13,6 +13,9 @@ public class Artist
 
     /**
      * Erzeugt eine Instanz mit Künstlername und Gage
+     * 
+     * @param artistName der Name der Künstlers
+     * @param artistSalary die Gage des Künstlers in Fr.
      */
     public Artist(String artistName, int artistSalary)
     {
@@ -20,6 +23,9 @@ public class Artist
     }
     /**
      * Setzt den Künstlernamen und seine Gage
+     * 
+     * @param artistName der Name des Künstlers
+     * @param artistSalary die Gage des Künstlers in Fr.
      */
     public void setArtistDetails(String artistName, int artistSalary)
     {
@@ -35,9 +41,20 @@ public class Artist
     }
     /**
      * Gibt die Gage des Künstlers zurück
+     * 
+     * @return gibt die Gage des Künstlers zurück in Fr.
      */
     public int getSalary()
     {
         return artistSalary;
+    }
+    /**
+     * Gibt den Namen des Künstlers zurück
+     * 
+     * @return gibt den Namen des Künstlers zurück
+     */
+    public String getArtistName()
+    {
+        return artistName;
     }
 }

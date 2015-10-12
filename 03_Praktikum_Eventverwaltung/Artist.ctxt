@@ -1,14 +1,17 @@
 #BlueJ class context
 comment0.params=artistName\ artistSalary
 comment0.target=Artist(java.lang.String,\ int)
-comment0.text=\r\n\ Erzeugt\ eine\ Instanz\ mit\ K\u00FCnstlername\ und\ Gage\r\n
+comment0.text=\r\n\ Erzeugt\ eine\ Instanz\ mit\ K\u00FCnstlername\ und\ Gage\r\n\ \r\n\ @param\ artistName\ der\ Name\ der\ K\u00FCnstlers\r\n\ @param\ artistSalary\ die\ Gage\ des\ K\u00FCnstlers\ in\ Fr.\r\n
 comment1.params=artistName\ artistSalary
 comment1.target=void\ setArtistDetails(java.lang.String,\ int)
-comment1.text=\r\n\ Setzt\ den\ K\u00FCnstlernamen\ und\ seine\ Gage\r\n
+comment1.text=\r\n\ Setzt\ den\ K\u00FCnstlernamen\ und\ seine\ Gage\r\n\ \r\n\ @param\ artistName\ der\ Name\ des\ K\u00FCnstlers\r\n\ @param\ artistSalary\ die\ Gage\ des\ K\u00FCnstlers\ in\ Fr.\r\n
 comment2.params=
 comment2.target=void\ printInfos()
 comment2.text=\r\n\ Gibt\ Informationen\ \u00FCber\ den\ K\u00FCnstler\ in\ der\ Konsole\ aus\r\n
 comment3.params=
 comment3.target=int\ getSalary()
-comment3.text=\r\n\ Gibt\ die\ Gage\ des\ K\u00FCnstlers\ zur\u00FCck\r\n
-numComments=4
+comment3.text=\r\n\ Gibt\ die\ Gage\ des\ K\u00FCnstlers\ zur\u00FCck\r\n\ \r\n\ @return\ gibt\ die\ Gage\ des\ K\u00FCnstlers\ zur\u00FCck\ in\ Fr.\r\n
+comment4.params=
+comment4.target=java.lang.String\ getArtistName()
+comment4.text=\r\n\ Gibt\ den\ Namen\ des\ K\u00FCnstlers\ zur\u00FCck\r\n\ \r\n\ @return\ gibt\ den\ Namen\ des\ K\u00FCnstlers\ zur\u00FCck\r\n
+numComments=5
