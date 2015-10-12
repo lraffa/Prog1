@@ -2,8 +2,8 @@
 /**
  * Write a description of class Artist here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (raffaluc, wemlmax) 
+ * @version (12.10.2015)
  */
 public class Artist
 {
@@ -12,24 +12,30 @@ public class Artist
     private int artistSalary;
 
     /**
-     * Constructor for objects of class Artist
+     * Erzeugt eine Instanz mit Künstlername und Gage
      */
     public Artist(String artistName, int artistSalary)
     {
         setArtistDetails(artistName, artistSalary);
     }
-
+    /**
+     * Setzt den Künstlernamen und seine Gage
+     */
     public void setArtistDetails(String artistName, int artistSalary)
     {
         this.artistName = artistName;
         this.artistSalary = artistSalary;
     }
-    
+    /**
+     * Gibt Informationen über den Künstler in der Konsole aus
+     */
     public void printInfos()
     {
         System.out.println(artistName + ", Gage: CHF "+artistSalary);
     }
-    
+    /**
+     * Gibt die Gage des Künstlers zurück
+     */
     public int getSalary()
     {
         return artistSalary;

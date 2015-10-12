@@ -2,34 +2,39 @@
 /**
  * Write a description of class Event here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (raffaluc, wemlmax) 
+ * @version (12.10.2015)
  */
 public class Event
 {
-    // instance variables - replace the example below with your own
     private Artist artist;
     private Ticket vipTicket;
     private Ticket standTicket;
     private Ticket indoorTicket;
 
     /**
-     * Constructor for objects of class Event
+     * Erzeugt eine Instanz ohne Angaben
      */
     public Event()
     {
         
     }
     
+    /**
+     * Erzeugt eine Instanz mit Künstlername, Gage, VIP-Tickets, Tribuehne-Tickets, Innenraum-Tickets
+     * inkl. Anzahl und Preis der einzelnen Tickets
+     */
     public Event(String artistName, int salary, int vipPrice, int standPrice, int indoorPrice, int vipTickets, int standTickets, int indoorTickets)
     {
         artist = new Artist(artistName, salary);
-        vipTicket = new Ticket("VIP-Ticket", 1, vipPrice, vipTickets);
-        standTicket = new Ticket("Stand-Ticket", 2, standPrice, standTickets);
-        indoorTicket = new Ticket("Indoor-Ticket", 3, indoorPrice, indoorTickets);
+        vipTicket = new Ticket("VIP-Ticket", 1, vipTickets, vipPrice);
+        standTicket = new Ticket("Stand-Ticket", 2, standTickets, standPrice);
+        indoorTicket = new Ticket("Indoor-Ticket", 3, indoorTickets,  indoorPrice);
         
     }
-    
+    /**
+     * Setzt den Namen und die Gage des Künstlers
+     */
     public void setArtist(String artistName, int artistSalary)
     {
         if(artist == null)
@@ -41,12 +46,48 @@ public class Event
             artist.setArtistDetails(artistName, artistSalary);
         }
     }
+    /**
+     * Setzt den Namen, die Kategorie, die Anzahl und den Preis eines Ticktes
+     */
+    public void setTicket(String name, int category, int amount, int price)
+    {
+        
+        
+           if(category == 1 && getTicketByCategory(1) == null)
+           {
+            Ticket ticket = getTicketByCategory(1);
+            ticket = new Ticket(name, category, price, amount);
+           }
+        
+          
+           else if(category == 2 && getTicketByCategory(2) == null)
+           {
+            Ticket ticket = getTicketByCategory(2);
+            ticket = new Ticket(name, category, price, amount);
+           }
+           else if(category == 3 && getTicketByCategory(3) == null)
+           {
+            Ticket ticket = getTicketByCategory(3);
+            ticket = new Ticket(name, category, price, amount);
+           }
+        
+           else
+           {
+            getTicketByCategory(category).setTicketDetails(name, category, amount, price);
+           }
+        
+    }
 
+    /**
+     * Kauft eine Anzahl Tickets einer bestimmten Ticket-Kategorie
+     */
     public void buyTickets(int category, int amount)
     {
         getTicketByCategory(category).buy(amount);
     }
-    
+    /**
+     * Gibt Informationen über den Event in der Konsole aus
+     */
     public void showEvent()
     {
         artist.printInfos();

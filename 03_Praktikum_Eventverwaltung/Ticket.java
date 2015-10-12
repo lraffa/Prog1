@@ -2,12 +2,11 @@
 /**
  * Write a description of class Ticket here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (raffaluc) 
+ * @version (12.10.2015)
  */
 public class Ticket
 {
-    // instance variables - replace the example below with your own
     private String name;
     private int category;
     private int amount;
@@ -15,7 +14,7 @@ public class Ticket
     private int soldAmount;
 
     /**
-     * Constructor for objects of class Ticket
+     * Erzeugt eine Instanz mit dem Ticketnamen, der Kategorie, der Anzahl und dem Preis
      */
     public Ticket(String name, int category, int amount, int price)
     {
@@ -24,23 +23,33 @@ public class Ticket
                 this.amount = amount;
                 this.price = price;
     }
-
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * Setzt den Namen, die Kategorie, die Azahl und den Preis des Tickets
+     */
+    public void setTicketDetails(String name, int categroy, int amount, int price)
+    {
+        this.name = name;
+        this.category = categroy;
+        this.amount = amount;
+        this. price = price;
+    }
+    /**
+     *  Gibt Informationen über das Ticket in der Konsole aus
      */
     public void printInfos()
     {
         System.out.println(name + ": " + soldAmount + " von " + amount + " verkauft, Einnahmen: CHF " + getEarnings( ));
     }
-    
+    /**
+     * Gibt die Summe aus Anzahl verkaufter Tickets und dem Preis zurück.
+     */
     public int getEarnings()
     {
         return soldAmount * price;
     }
-    
+    /**
+     * Kauft eine Anzahl Tickets, Überprüft ob noch genügend Tickets vorhanden sind
+     */
     public void buy(int amountToBuy)
     {
         if((amount - soldAmount) >= amountToBuy)
