@@ -53,22 +53,22 @@ public class Event
     {
         
         
-           if(category == 1 && getTicketByCategory(1) == null)
+           if(category == 1 && vipTicket == null)
            {
-            Ticket ticket = getTicketByCategory(1);
-            ticket = new Ticket(name, category, price, amount);
+            
+            vipTicket = new Ticket(name, category, price, amount);
            }
         
           
-           else if(category == 2 && getTicketByCategory(2) == null)
+           else if(category == 2 && standTicket == null)
            {
-            Ticket ticket = getTicketByCategory(2);
-            ticket = new Ticket(name, category, price, amount);
+           
+            standTicket = new Ticket(name, category, price, amount);
            }
-           else if(category == 3 && getTicketByCategory(3) == null)
+           else if(category == 3 && indoorTicket == null)
            {
-            Ticket ticket = getTicketByCategory(3);
-            ticket = new Ticket(name, category, price, amount);
+           
+            indoorTicket = new Ticket(name, category, price, amount);
            }
         
            else
