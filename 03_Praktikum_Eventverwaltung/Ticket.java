@@ -8,15 +8,25 @@
 public class Ticket
 {
     private String name;
-    private int category;
+    private TicketCategory category;
     private int amount;
     private int price;
     private int soldAmount;
-
+    
+    public enum TicketCategory {
+        VIP_TICKET,
+        STAND_TICKET,
+        INDOOR_TICKET
+    }
+    
+    public Ticket()
+    {
+    }
+    
     /**
      * Erzeugt eine Instanz mit dem Ticketnamen, der Kategorie, der Anzahl und dem Preis
      */
-    public Ticket(String name, int category, int amount, int price)
+    public Ticket(String name, TicketCategory category, int amount, int price)
     {
                 this.name = name;
                 this.category = category;
@@ -26,7 +36,7 @@ public class Ticket
     /**
      * Setzt den Namen, die Kategorie, die Azahl und den Preis des Tickets
      */
-    public void setTicketDetails(String name, int categroy, int amount, int price)
+    public void setTicketDetails(String name, TicketCategory categroy, int amount, int price)
     {
         this.name = name;
         this.category = categroy;

@@ -27,9 +27,9 @@ public class Event
     public Event(String artistName, int salary, int vipPrice, int standPrice, int indoorPrice, int vipTickets, int standTickets, int indoorTickets)
     {
         artist = new Artist(artistName, salary);
-        vipTicket = new Ticket("VIP-Ticket", 1, vipTickets, vipPrice);
-        standTicket = new Ticket("Stand-Ticket", 2, standTickets, standPrice);
-        indoorTicket = new Ticket("Indoor-Ticket", 3, indoorTickets,  indoorPrice);
+        vipTicket = new Ticket("VIP-Ticket", Ticket.TicketCategory.VIP_TICKET, vipTickets, vipPrice);
+        standTicket = new Ticket("Stand-Ticket", Ticket.TicketCategory.STAND_TICKET, standTickets, standPrice);
+        indoorTicket = new Ticket("Indoor-Ticket", Ticket.TicketCategory.INDOOR_TICKET, indoorTickets,  indoorPrice);
         
     }
     /**
@@ -49,39 +49,22 @@ public class Event
     /**
      * Setzt den Namen, die Kategorie, die Anzahl und den Preis eines Ticktes
      */
-    public void setTicket(String name, int category, int amount, int price)
+    public void setTicket(String name, Ticket.TicketCategory category, int amount, int price)
     {
-        
-        
-           if(category == 1 && vipTicket == null)
-           {
-            
-            vipTicket = new Ticket(name, category, price, amount);
-           }
-        
-          
-           else if(category == 2 && standTicket == null)
-           {
-           
-            standTicket = new Ticket(name, category, price, amount);
-           }
-           else if(category == 3 && indoorTicket == null)
-           {
-           
-            indoorTicket = new Ticket(name, category, price, amount);
-           }
-        
-           else
-           {
+        if(getTicketByCategory(category)==null)
+        {
+            createTicketByCategory(category).setTicketDetails(name, category, amount, price);
+        }
+        else
+        {
             getTicketByCategory(category).setTicketDetails(name, category, amount, price);
-           }
-        
+        }        
     }
 
     /**
      * Kauft eine Anzahl Tickets einer bestimmten Ticket-Kategorie
      */
-    public void buyTickets(int category, int amount)
+    public void buyTickets(Ticket.TicketCategory category, int amount)
     {
         getTicketByCategory(category).buy(amount);
     }
@@ -92,29 +75,35 @@ public class Event
     {
         artist.printInfos();
         int revenue = 0;
-        
-        for(int i = 1; i <= 3; i++)
+        for(Ticket.TicketCategory category : Ticket.TicketCategory.values())
         {
-            Ticket ticket = getTicketByCategory(i);
+            Ticket ticket = getTicketByCategory(category);
             ticket.printInfos();
             revenue += ticket.getEarnings();
         }
-        /*
-        System.out.println("VIP-Tickets: "+vipTicketsSold+" von "+ vipTickets + " verkauft, Einnahmen: CHF " + earnings);
-        System.out.println("Tribuene-Tickets: "+standTicketsSold+" von "+standTickets+" verkauft, Einnahmen: CHF "+earnings);
-        System.out.println("Innenraum-Tickets: "+indoorTicketsSold+" von "+indoorTickets+");
-        */
+
         System.out.println("");
         System.out.println("Gewinn: CHF " +(revenue - artist.getSalary()));
     }
     
-    private Ticket getTicketByCategory(int category)
+    private Ticket getTicketByCategory(Ticket.TicketCategory category)
     {
         switch(category)
         {
-            case 1: return vipTicket;
-            case 2: return standTicket;
-            case 3: return indoorTicket;
+            case VIP_TICKET: return vipTicket;
+            case STAND_TICKET: return standTicket;
+            case INDOOR_TICKET: return indoorTicket;
+            default: return null;
+        }
+    }
+    
+    private Ticket createTicketByCategory(Ticket.TicketCategory category)
+    {
+        switch(category)
+        {
+            case VIP_TICKET: return (vipTicket = new Ticket());
+            case STAND_TICKET: return (standTicket = new Ticket());
+            case INDOOR_TICKET: return (indoorTicket = new Ticket());
             default: return null;
         }
     }
