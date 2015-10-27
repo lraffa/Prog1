@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ messen()
+comment0.text=\r\n\ Fuehrt\ eine\ Messung\ durch.\r\n
+comment1.params=
+comment1.target=void\ initialisieren()
+comment2.params=
+comment2.target=void\ analyseDurchfuehren()
+comment3.params=
+comment3.target=void\ berechneUndDruckeMittelwerteMessreihe()
+comment4.params=
+comment4.target=void\ berechneUndDruckeMittelwerteMessung()
+numComments=5

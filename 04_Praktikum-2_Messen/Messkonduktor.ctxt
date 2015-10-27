@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=anzahlZufallszahlen
+comment0.target=Messkonduktor(int)
+comment0.text=\r\n\ Erstellt\ einen\ Messkonduktor.\r\n\ \r\n\ @param\ anzahlZufallszahlen\ Anzahl\ Zufallszahlen\ pro\ Messung.\r\n
+comment1.params=messResultate
+comment1.target=int[]\ messungenDurchfuehren(int[])
+comment1.text=\r\n\ Fuehrt\ eine\ Anzahl\ Messungen\ durch.\ Die\ Anzahl\ ist\ bestimmt\ durch\ die\r\n\ Laenge\ des\ uebergeben\ Arrays.\ Eine\ einzelne\ Messung\ besteht\ aus\ dem\r\n\ Generieren\ und\ Sortieren\ der\ Zufallszahlen.\r\n\ \r\n\ @param\ messResultate\ Der\ Array\ fuer\ die\ Messresultate.\r\n\ @return\ Messresultate\ mit\ Zeitdauer\ in\ ms.\r\n
+comment2.params=
+comment2.target=int\ einzelneMessungDurchfuehren()
+comment3.params=
+comment3.target=int[]\ zufallszahlenGenerieren()
+numComments=4
