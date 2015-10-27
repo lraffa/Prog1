@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ fuehreAus()
+comment0.text=\r\n\ Fuehrt\ die\ Simulation\ aus.\r\n
+comment1.params=
+comment1.target=double\ generiereZufaelligePruefungsnote()
+numComments=2

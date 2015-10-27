@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=ergebnis
+comment0.target=void\ speichereErgebnis(Pruefungsergebnis)
+comment0.text=\r\n\ Speichert\ ein\ Pruefungsergebnis.\r\n\ \r\n\ @param\ ergebnis\ Das\ Pruefungsergebnis.\r\n
+comment1.params=
+comment1.target=void\ druckeAntworttexte()
+comment1.text=\r\n\ Gibt\ pro\ gespeichert\ Ergebnis\ einen\ Text\ auf\ die\ Konsole\ aus.\r\n\ Je\ nachdem\ ob\ der\ Kandidate\ die\ Pruefung\ bestanden\ (>\=\ 4.0)\ oder\ nicht\r\n\ bestanden\ (<\ 4.0)\ hat,\ wird\ ein\ Text\ in\ folgendem\ Format\ ausgegeben\:\r\n\ \r\n\ Sie\ haben\ an\ der\ Pruefung\ eine\ 3.0\ erzielt\ und\ \r\n\ sind\ somit\ durchgefallen\!\r\n\ \r\n\ Herzliche\ Gratulation\ Max\ Muster\!\ Sie\ haben\ an\ der\ Pruefung\ eine\ 4.5\r\n\ erzielt\ und\ somit\ bestanden\!\r\n
+comment2.params=note
+comment2.target=double\ rundeAufHalbeNote(double)
+numComments=3
