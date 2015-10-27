@@ -62,7 +62,7 @@ public class Event
      * Setzt den Namen, die Kategorie, die Anzahl und den Preis eines Ticktes
      * 
      * @param name der Name des Tickets
-     * @param category die Ticket-Kategorie aus der Klasse Ticket
+     * @param category die Ticket-Kategorie aus der Klasse Ticket (VIP_TICKET, STAND_TICKET, INDOOR_TICKET)
      * @amount die anzahl Tickets in Stück
      * @price der Preis pro Ticket in Fr.
      * 
@@ -82,7 +82,7 @@ public class Event
     /**
      * Kauft eine Anzahl Tickets einer bestimmten Ticket-Kategorie
      * 
-     * @param category die Ticket-Kategorie aus der Klasse Ticket
+     * @param category die Ticket-Kategorie aus der Klasse Ticket (VIP_TICKET, STAND_TICKET, INDOOR_TICKET)
      * @param amount die anzahl Tickets in Stück
      */
     public void buyTickets(Ticket.TicketCategory category, int amount)
@@ -110,7 +110,7 @@ public class Event
     /**
      *  Gibt die Ticket Art nach Kategorie zurück
      *  
-     *  @param category die Ticket-Kategorie aus der Klasse Ticket
+     *  @param category die Ticket-Kategorie aus der Klasse Ticket (VIP_TICKET, STAND_TICKET, INDOOR_TICKET)
      *  
      *  @return das Ticket in der gewünschten Ticket-Kategorie 
      */
