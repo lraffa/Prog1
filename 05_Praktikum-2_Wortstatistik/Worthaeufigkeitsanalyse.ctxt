@@ -7,4 +7,6 @@ comment2.params=text
 comment2.target=void\ verarbeiteText(java.lang.String)
 comment3.params=
 comment3.target=void\ ausgeben()
-numComments=4
+comment4.params=
+comment4.target=void\ loescheText()
+numComments=5
