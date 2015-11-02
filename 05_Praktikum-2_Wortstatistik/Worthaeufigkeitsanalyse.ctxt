@@ -1,12 +1,17 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Worthaeufigkeitsanalyse()
+comment0.text=\r\n\ Erzeugt\ eine\ Instanz\ mit\ einem\ neuen\ result\ HashMap\r\n
 comment1.params=
 comment1.target=void\ setTestdata()
+comment1.text=\r\n\ Erzeugt\ den\ zu\ verarbeitenden\ Text\r\n
 comment2.params=text
 comment2.target=void\ verarbeiteText(java.lang.String)
+comment2.text=\r\n\ Verarbeitet\ den\ eingegebenen\ Text\r\n\t\ \ \ @param\ text\ den\ zu\ verarbeitenden\ Text\r\n
 comment3.params=
 comment3.target=void\ ausgeben()
+comment3.text=\r\n\tGibt\ die\ im\ Text\ vorkommenden\ W\u00F6rter\ und\ ihre\ Anzahl\ aus\r\n
 comment4.params=
 comment4.target=void\ loescheText()
+comment4.text=\r\n\tL\u00F6scht\ den\ bis\ jetzt\ eingegebenen\ Text\r\n
 numComments=5
