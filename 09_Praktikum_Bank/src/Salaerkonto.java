@@ -10,7 +10,7 @@ public class Salaerkonto extends Bankkonto{
 		super(inhaber, ersteinlage);
 	}
 	public Salaerkonto(String inhaber, double ersteinlage, double bezugslimite){
-		super(inhaber, ersteinlage);
+		super(inhaber);
 		setBezugslimite(bezugslimite);
 		einbezahlen(ersteinlage);
 	}
