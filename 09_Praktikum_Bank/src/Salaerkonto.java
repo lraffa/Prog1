@@ -1,7 +1,9 @@
 
 public class Salaerkonto extends Bankkonto{
-	protected int bezugslimite;
-	final int LIMIT = 1000000;
+	
+	private int bezugslimite;
+	
+	final int LIMIT = 1_000_000;
 	
 	public Salaerkonto(String inhaber){
 		super(inhaber);
